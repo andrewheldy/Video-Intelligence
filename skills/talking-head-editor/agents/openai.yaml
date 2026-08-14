@@ -1,0 +1,4 @@
+interface:
+  display_name: "Talking-Head Editor"
+  short_description: "Plan edits around genuine talking-head footage"
+  default_prompt: "Use $talking-head-editor to create a restrained edit plan for this footage and transcript."

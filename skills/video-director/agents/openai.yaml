@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video Director"
+  short_description: "Turn a brief into a validated video plan"
+  default_prompt: "Use $video-director to turn this brief and project profile into a VideoSpec."

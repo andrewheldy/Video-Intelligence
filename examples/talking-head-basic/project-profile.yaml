@@ -1,0 +1,31 @@
+version: "1"
+brand: example-project
+format:
+  primary: "9:16"
+  width: 1080
+  height: 1920
+  fps: 30
+  safeAreaPercent: 6
+editing:
+  visualInterruptSeconds: 6
+  removeSilenceOverMs: 350
+  minimumShotFrames: 6
+talkingHead:
+  maxPunchIn: 1.05
+  allowSyntheticRepair: false
+captions:
+  mode: selective
+  maxCharactersPerLine: 32
+  maxLines: 2
+  minimumDisplayMs: 700
+motion:
+  intensity: restrained
+  reducedMotionStrategy: retain-essential-only
+graphics:
+  maxConcurrent: 3
+generation:
+  preferRealAssets: true
+  imageBeforeVideo: true
+  maxGeneratedClipSeconds: 6
+avoid:
+  - motion without editorial purpose

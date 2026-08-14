@@ -1,0 +1,4 @@
+interface:
+  display_name: "Render Review"
+  short_description: "Review a render against its source specification"
+  default_prompt: "Use $render-review to compare this render with its VideoSpec and report revision-ready issues."

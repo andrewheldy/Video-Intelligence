@@ -1,0 +1,5 @@
+interface:
+  display_name: "Replace With Display Name"
+  short_description: "Describe the skill in 25 to 64 characters"
+  default_prompt: "Use $replace-with-video-skill-name to perform the video-specific task."
+

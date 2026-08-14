@@ -1,0 +1,81 @@
+version: "1"
+metadata:
+  id: talking-head-basic
+  title: Talking-head architecture example
+  projectId: example-project
+  createdBy: human-reviewed-agent-plan
+format:
+  width: 1080
+  height: 1920
+  fps: 30
+  durationFrames: 300
+assets:
+  - id: camera-a
+    type: video
+    uri: .video/assets/camera-a.mp4
+    origin: source
+    durationFrames: 300
+    width: 1080
+    height: 1920
+scenes:
+  - id: opening
+    startFrame: 0
+    durationFrames: 180
+    purpose: Establish the speaker and the central claim.
+    shots:
+      - id: opening-camera
+        assetId: camera-a
+        startFrame: 0
+        durationFrames: 180
+        sourceStartFrame: 0
+        fit: cover
+        role: primary
+    graphics:
+      - id: speaker-name
+        type: lower-third
+        startFrame: 20
+        durationFrames: 80
+        text: Speaker Name
+        safeArea: true
+    transitionOut:
+      type: cut
+      durationFrames: 0
+  - id: explanation
+    startFrame: 180
+    durationFrames: 120
+    purpose: Complete the explanation without replacing genuine footage.
+    shots:
+      - id: explanation-camera
+        assetId: camera-a
+        startFrame: 0
+        durationFrames: 120
+        sourceStartFrame: 180
+        fit: cover
+        role: primary
+    graphics: []
+audioTracks:
+  - id: dialogue
+    kind: dialogue
+    assetId: camera-a
+    startFrame: 0
+    durationFrames: 300
+    sourceStartFrame: 0
+    gainDb: 0
+captions:
+  - id: caption-1
+    startFrame: 12
+    endFrame: 45
+    text: Start with genuine footage.
+  - id: caption-2
+    startFrame: 190
+    endFrame: 230
+    text: Let the edit support the idea.
+editDecisions:
+  - id: preserve-subject
+    sceneIds: [opening, explanation]
+    decision: Use the continuous camera source as the human subject.
+    rationale: Genuine footage accomplishes the brief without subject synthesis.
+    source: human
+reviewIssues: []
+renders: []
+
